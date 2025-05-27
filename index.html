@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neeraj Kumar - AI/ML & NLP Engineer</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#FF6B35',secondary:'#1D3557'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        .skill-card, .project-card, .blog-card, .competition-card {
+            transition: all 0.3s ease;
+        }
+        .hero-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url('https://readdy.ai/api/search-image?query=abstract%20digital%20particle%20background%20with%20soft%20orange%20and%20blue%20gradient%2C%20minimal%20tech%20pattern%2C%20high%20quality%20professional%20looking%2C%20subtle%20tech%20particles%20floating%20in%20space&width=1920&height=1080&seq=hero-bg&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.8;
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .progress-bar {
+            height: 8px;
+            border-radius: 4px;
+            background: #e2e8f0;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+            background: linear-gradient(90deg, #FF6B35 0%, #FF8C61 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-['Pacifico'] text-primary">Neeraj</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-700 hover:text-primary transition-colors">About</a>
+                <a href="#skills" class="text-gray-700 hover:text-primary transition-colors">Skills</a>
+                <a href="#education" class="text-gray-700 hover:text-primary transition-colors">Education</a>
+                <a href="#projects" class="text-gray-700 hover:text-primary transition-colors">Projects</a>
+                <a href="#blog" class="text-gray-700 hover:text-primary transition-colors">Blog</a>
+                <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+            </div>
+            <button class="md:hidden w-10 h-10 flex items-center justify-center">
+                <i class="ri-menu-line ri-lg"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center pt-16">
+        <div class="hero-particles"></div>
+        <div class="container mx-auto px-6 py-16 z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-4 font-poppins">
+                    Hi, I'm <span class="text-primary">Neeraj Kumar</span>
+                </h1>
+                <h2 class="text-xl md:text-2xl text-gray-700 mb-8 font-poppins">
+                    AI/ML & NLP Engineer
+                </h2>
+                <p class="text-lg md:text-xl text-gray-600 mb-10">
+                    Let's Innovate Together
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#" class="px-8 py-3 bg-primary text-white font-medium rounded-button shadow-lg hover:shadow-xl transition-all whitespace-nowrap flex items-center justify-center gap-2">
+                        <i class="ri-download-line"></i>
+                        Download Resume
+                    </a>
+                    <a href="#contact" class="px-8 py-3 bg-white text-primary border border-primary font-medium rounded-button shadow hover:shadow-lg transition-all whitespace-nowrap flex items-center justify-center gap-2">
+                        <i class="ri-mail-line"></i>
+                        Contact Me
+                    </a>
+                </div>
+                <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+                    <i class="ri-arrow-down-line ri-2x text-gray-500"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-16 font-poppins">About Me</h2>
+                <div class="glass-card rounded-2xl p-8 shadow-lg">
+                    <div class="flex flex-col md:flex-row gap-8 items-center">
+                        <div class="w-48 h-48 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="https://readdy.ai/api/search-image?query=professional%20portrait%20of%20a%20young%20Indian%20male%20tech%20professional%20with%20glasses%2C%20neutral%20expression%2C%20professional%20attire%2C%20high%20quality%2C%20studio%20lighting%2C%20professional%20headshot&width=400&height=400&seq=profile&orientation=squarish" alt="Neeraj Kumar" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                                I'm a passionate AI/ML & NLP Engineer with expertise in developing intelligent systems that solve real-world problems. With a strong foundation in computer science and a keen interest in artificial intelligence, I specialize in building machine learning models, natural language processing systems, and data-driven applications.
+                            </p>
+                            <p class="text-gray-700 text-lg leading-relaxed">
+                                Currently pursuing my B.Tech in Computer Science Engineering, I'm actively involved in research projects and hackathons to expand my knowledge and skills in the field of AI. I believe in the power of technology to transform lives and am committed to creating innovative solutions that make a difference.
+                            </p>
+                            <div class="flex mt-6 gap-4">
+                                <div class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full">
+                                    <i class="ri-robot-line ri-lg text-primary"></i>
+                                </div>
+                                <div class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full">
+                                    <i class="ri-brain-line ri-lg text-primary"></i>
+                                </div>
+                                <div class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full">
+                                    <i class="ri-chat-3-line ri-lg text-primary"></i>
+                                </div>
+                                <div class="w-10 h-10 flex items-center justify-center bg-gray-100 rounded-full">
+                                    <i class="ri-database-2-line ri-lg text-primary"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 font-poppins">My Skills</h2>
+            
+            <!-- Languages -->
+            <div class="mb-16">
+                <h3 class="text-xl font-semibold mb-6 text-gray-800">Programming Languages</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="skill-card glass-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4">
+                                <i class="ri-python-line ri-lg text-blue-600"></i>
+                            </div>
+                            <h4 class="text-lg font-medium">Python</h4>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 95%"></div>
+                        </div>
+                        <p class="mt-4 text-sm text-gray-600">
+                            Expert in Python for ML/AI applications, data processing, and automation.
+                        </p>
+                    </div>
+                    
+                    <div class="skill-card glass-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4">
+                                <i class="ri-database-line ri-lg text-blue-600"></i>
+                            </div>
+                            <h4 class="text-lg font-medium">SQL</h4>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                        <p class="mt-4 text-sm text-gray-600">
+                            Proficient in database queries, data manipulation, and database design.
+                        </p>
+                    </div>
+                    
+                    <div class="skill-card glass-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4">
+                                <i class="ri-bar-chart-line ri-lg text-blue-600"></i>
+                            </div>
+                            <h4 class="text-lg font-medium">R</h4>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                        <p class="mt-4 text-sm text-gray-600">
+                            Experienced in statistical analysis and data visualization with R.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Frameworks & Libraries -->
+            <div class="mb-16">
+                <h3 class="text-xl font-semibold mb-6 text-gray-800">Frameworks & Libraries</h3>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div class="skill-card glass-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 flex items-center justify-center bg-green-100 rounded-full mr-4">
+                                <i class="ri-tensorflow-line ri-lg text-green-600"></i>
+                            </div>
+                            <h4 class="text-lg font-medium">TensorFlow</h4>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card glass-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 flex items-center justify-center bg-green-100 rounded-full mr-4">
+                                <i class="ri-fire-line ri-lg text-green-600"></i>
+                            </div>
+                            <h4 class="text-lg font-medium">PyTorch</h4>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card glass-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 flex items-center justify-center bg-green-100 rounded-full mr-4">
+                                <i class="ri-flask-line ri-lg text-green-600"></i>
+                            </div>
+                            <h4 class="text-lg font-medium">Scikit-Learn</h4>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card glass-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 flex items-center justify-center bg-green-100 rounded-full mr-4">
+                                <i class="ri-chat-check-line ri-lg text-green-600"></i>
+                            </div>
+                            <h4 class="text-lg font-medium">NLTK/spaCy</h4>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 88%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Platforms & Tools -->
+            <div class="mb-16">
+                <h3 class="text-xl font-semibold mb-6 text-gray-800">Platforms & Tools</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="skill-card glass-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 flex items-center justify-center bg-purple-100 rounded-full mr-4">
+                                <i class="ri-cloud-line ri-lg text-purple-600"></i>
+                            </div>
+                            <h4 class="text-lg font-medium">AWS/GCP</h4>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card glass-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 flex items-center justify-center bg-purple-100 rounded-full mr-4">
+                                <i class="ri-git-branch-line ri-lg text-purple-600"></i>
+                            </div>
+                            <h4 class="text-lg font-medium">Git/GitHub</h4>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card glass-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 flex items-center justify-center bg-purple-100 rounded-full mr-4">
+                                <i class="ri-dashboard-line ri-lg text-purple-600"></i>
+                            </div>
+                            <h4 class="text-lg font-medium">Jupyter/Colab</h4>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 98%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Soft Skills -->
+            <div>
+                <h3 class="text-xl font-semibold mb-6 text-gray-800">Soft Skills</h3>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div class="skill-card glass-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 flex items-center justify-center bg-amber-100 rounded-full mr-4">
+                                <i class="ri-team-line ri-lg text-amber-600"></i>
+                            </div>
+                            <h4 class="text-lg font-medium">Teamwork</h4>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card glass-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 flex items-center justify-center bg-amber-100 rounded-full mr-4">
+                                <i class="ri-lightbulb-line ri-lg text-amber-600"></i>
+                            </div>
+                            <h4 class="text-lg font-medium">Problem Solving</h4>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card glass-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 flex items-center justify-center bg-amber-100 rounded-full mr-4">
+                                <i class="ri-presentation-line ri-lg text-amber-600"></i>
+                            </div>
+                            <h4 class="text-lg font-medium">Communication</h4>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card glass-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 flex items-center justify-center bg-amber-100 rounded-full mr-4">
+                                <i class="ri-time-line ri-lg text-amber-600"></i>
+                            </div>
+                            <h4 class="text-lg font-medium">Time Management</h4>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 font-poppins">Education</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="glass-card rounded-2xl p-8 shadow-lg">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center">
+                                <i class="ri-graduation-cap-line ri-2x text-primary"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Bachelor of Technology in Computer Science Engineering</h3>
+                            <p class="text-gray-600 mb-4">K.R. Mangalam University (2022–2026)</p>
+                            <div class="flex items-center mb-4">
+                                <div class="w-full max-w-xs bg-gray-200 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-primary h-full rounded-full" style="width: 75%"></div>
+                                </div>
+                                <span class="ml-4 text-lg font-medium">GPA: 7.5</span>
+                            </div>
+                            <p class="text-gray-700">
+                                Focusing on Artificial Intelligence and Machine Learning specialization. Relevant coursework includes Data Structures & Algorithms, Database Management Systems, Machine Learning, Deep Learning, and Natural Language Processing.
+                            </p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Data Structures</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Algorithms</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Machine Learning</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Deep Learning</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">NLP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 font-poppins">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden shadow-lg">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=AI%20natural%20language%20processing%20visualization%2C%20question%20answering%20system%2C%20duplicate%20detection%20algorithm%20visualization%2C%20professional%20tech%20interface%2C%20high%20quality&width=600&height=400&seq=project1&orientation=landscape" alt="Quora Duplicate Detector" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Quora Duplicate Detector</h3>
+                        <p class="text-gray-600 mb-4">
+                            An NLP system that identifies semantically similar questions using BERT embeddings and cosine similarity.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Python</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">BERT</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">NLP</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">PyTorch</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="text-primary hover:text-primary/80 flex items-center gap-1">
+                                <i class="ri-github-line"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="#" class="text-primary hover:text-primary/80 flex items-center gap-1">
+                                <i class="ri-external-link-line"></i>
+                                <span>Live Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden shadow-lg">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=restaurant%20recommendation%20system%20interface%2C%20food%20AI%20analysis%2C%20machine%20learning%20food%20preferences%20visualization%2C%20professional%20tech%20interface%2C%20high%20quality&width=600&height=400&seq=project2&orientation=landscape" alt="Restaurant Recommender" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Restaurant Recommender</h3>
+                        <p class="text-gray-600 mb-4">
+                            A collaborative filtering system that recommends restaurants based on user preferences and past ratings.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Python</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Scikit-learn</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Pandas</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Flask</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="text-primary hover:text-primary/80 flex items-center gap-1">
+                                <i class="ri-github-line"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="#" class="text-primary hover:text-primary/80 flex items-center gap-1">
+                                <i class="ri-external-link-line"></i>
+                                <span>Live Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card glass-card rounded-2xl overflow-hidden shadow-lg">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=startup%20ecosystem%20data%20visualization%2C%20business%20analytics%20dashboard%2C%20tech%20investment%20trends%20chart%2C%20professional%20tech%20interface%2C%20high%20quality&width=600&height=400&seq=project3&orientation=landscape" alt="Startup Ecosystem Analysis" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Startup Ecosystem Analysis</h3>
+                        <p class="text-gray-600 mb-4">
+                            Data-driven analysis of startup funding patterns and success factors using statistical modeling.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">R</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Python</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Tableau</span>
+                            <span class="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">Data Analysis</span>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="#" class="text-primary hover:text-primary/80 flex items-center gap-1">
+                                <i class="ri-github-line"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="#" class="text-primary hover:text-primary/80 flex items-center gap-1">
+                                <i class="ri-external-link-line"></i>
+                                <span>Report</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hackathons & Competitions -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 font-poppins">Hackathons & Competitions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Competition 1 -->
+                <div class="competition-card glass-card rounded-2xl p-6 shadow-lg">
+                    <div class="flex items-start gap-4">
+                        <div class="w-16 h-16 flex-shrink-0 bg-primary/10 rounded-full flex items-center justify-center">
+                            <i class="ri-code-box-line ri-2x text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Hack KRMU 4.0</h3>
+                            <p class="text-gray-600 mb-3">March 2023</p>
+                            <p class="text-gray-700 mb-4">
+                                Developed an AI-powered health monitoring system that won 2nd place among 50+ teams. The solution used computer vision to detect early signs of health issues.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">2nd Place</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">AI</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Computer Vision</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Competition 2 -->
+                <div class="competition-card glass-card rounded-2xl p-6 shadow-lg">
+                    <div class="flex items-start gap-4">
+                        <div class="w-16 h-16 flex-shrink-0 bg-primary/10 rounded-full flex items-center justify-center">
+                            <i class="ri-code-line ri-2x text-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Code the Web</h3>
+                            <p class="text-gray-600 mb-3">November 2022</p>
+                            <p class="text-gray-700 mb-4">
+                                Created an accessibility-focused web application that helps visually impaired users navigate websites using voice commands and NLP techniques.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">Finalist</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Web</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">Accessibility</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">NLP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section -->
+    <section id="blog" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 font-poppins">Latest Articles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="blog-card glass-card rounded-2xl overflow-hidden shadow-lg">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=natural%20language%20processing%20concept%20visualization%2C%20AI%20text%20analysis%2C%20language%20models%2C%20professional%20tech%20article%20header%20image%2C%20high%20quality&width=600&height=400&seq=blog1&orientation=landscape" alt="NLP Techniques" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="text-sm text-gray-500">May 15, 2023</span>
+                            <span class="mx-2 text-gray-300">•</span>
+                            <span class="text-sm text-gray-500">8 min read</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Advanced NLP Techniques for Question Answering Systems</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-3">
+                            Exploring the latest advancements in natural language processing for building robust question answering systems using transformer models and semantic understanding.
+                        </p>
+                        <a href="#" class="text-primary hover:text-primary/80 flex items-center gap-1">
+                            <span>Read More</span>
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 2 -->
+                <div class="blog-card glass-card rounded-2xl overflow-hidden shadow-lg">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=machine%20learning%20recommendation%20systems%20visualization%2C%20collaborative%20filtering%2C%20personalization%20algorithms%2C%20professional%20tech%20article%20header%20image%2C%20high%20quality&width=600&height=400&seq=blog2&orientation=landscape" alt="Recommendation Systems" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="text-sm text-gray-500">April 2, 2023</span>
+                            <span class="mx-2 text-gray-300">•</span>
+                            <span class="text-sm text-gray-500">6 min read</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Building Effective Recommendation Systems: Beyond Collaborative Filtering</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-3">
+                            A deep dive into modern recommendation system architectures that combine collaborative filtering with content-based approaches and deep learning for more accurate suggestions.
+                        </p>
+                        <a href="#" class="text-primary hover:text-primary/80 flex items-center gap-1">
+                            <span>Read More</span>
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 3 -->
+                <div class="blog-card glass-card rounded-2xl overflow-hidden shadow-lg">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=data%20science%20startup%20analysis%20visualization%2C%20business%20intelligence%20dashboard%2C%20venture%20capital%20trends%2C%20professional%20tech%20article%20header%20image%2C%20high%20quality&width=600&height=400&seq=blog3&orientation=landscape" alt="Startup Analysis" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="text-sm text-gray-500">March 10, 2023</span>
+                            <span class="mx-2 text-gray-300">•</span>
+                            <span class="text-sm text-gray-500">10 min read</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Data-Driven Insights: What Makes Startups Succeed?</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-3">
+                            Analyzing key factors that contribute to startup success using statistical models and machine learning to identify patterns in funding, team composition, and market timing.
+                        </p>
+                        <a href="#" class="text-primary hover:text-primary/80 flex items-center gap-1">
+                            <span>Read More</span>
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="https://medium.com/@neerajkumar75260" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary border border-primary font-medium rounded-button shadow hover:shadow-lg transition-all whitespace-nowrap">
+                    <i class="ri-medium-line"></i>
+                    View All Articles on Medium
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 font-poppins">Get In Touch</h2>
+            <div class="max-w-5xl mx-auto glass-card rounded-2xl p-8 shadow-lg">
+                <div class="flex flex-col md:flex-row gap-12">
+                    <div class="md:w-2/5">
+                        <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                        <p class="text-gray-600 mb-8">
+                            Feel free to reach out if you're looking for collaboration, have questions, or just want to connect.
+                        </p>
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full flex-shrink-0">
+                                    <i class="ri-mail-line text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-medium text-gray-500 mb-1">Email</h4>
+                                    <a href="mailto:neerajkumar75260@gmail.com" class="text-gray-800 hover:text-primary">neerajkumar75260@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full flex-shrink-0">
+                                    <i class="ri-map-pin-line text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-medium text-gray-500 mb-1">Location</h4>
+                                    <p class="text-gray-800">New Delhi, India</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full flex-shrink-0">
+                                    <i class="ri-links-line text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-medium text-gray-500 mb-1">Social Profiles</h4>
+                                    <div class="flex gap-4 mt-2">
+                                        <a href="https://github.com/neekuujii2" class="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-gray-200 rounded-full transition-colors">
+                                            <i class="ri-github-fill text-gray-700"></i>
+                                        </a>
+                                        <a href="https://linkedin.com/in/neeraj-kumar" class="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-gray-200 rounded-full transition-colors">
+                                            <i class="ri-linkedin-fill text-gray-700"></i>
+                                        </a>
+                                        <a href="https://medium.com/@neerajkumar75260" class="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-gray-200 rounded-full transition-colors">
+                                            <i class="ri-medium-fill text-gray-700"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-3/5">
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                                    <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring focus:ring-primary/20 focus:outline-none transition-colors" placeholder="Your name">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring focus:ring-primary/20 focus:outline-none transition-colors" placeholder="your.email@example.com">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                                <input type="text" id="subject" name="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring focus:ring-primary/20 focus:outline-none transition-colors" placeholder="What is this regarding?">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring focus:ring-primary/20 focus:outline-none transition-colors resize-none" placeholder="Your message here..."></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full px-6 py-3 bg-primary text-white font-medium rounded-button shadow-lg hover:shadow-xl transition-all whitespace-nowrap flex items-center justify-center gap-2">
+                                    <i class="ri-send-plane-line"></i>
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-8 md:mb-0">
+                    <a href="#" class="text-2xl font-['Pacifico'] text-white">Neeraj</a>
+                    <p class="mt-2 text-gray-400">AI/ML & NLP Engineer</p>
+                </div>
+                <div class="flex flex-col md:flex-row gap-8 md:gap-16">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                            <li><a href="#skills" class="text-gray-400 hover:text-white transition-colors">Skills</a></li>
+                            <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors">Projects</a></li>
+                            <li><a href="#blog" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                        <ul class="space-y-2">
+                            <li><a href="https://github.com/neekuujii2" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><i class="ri-github-fill"></i> GitHub</a></li>
+                            <li><a href="https://linkedin.com/in/neeraj-kumar" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><i class="ri-linkedin-fill"></i> LinkedIn</a></li>
+                            <li><a href="https://medium.com/@neerajkumar75260" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><i class="ri-medium-fill"></i> Medium</a></li>
+                            <li><a href="mailto:neerajkumar75260@gmail.com" class="text-gray-400 hover:text-white transition-colors flex items-center gap-2"><i class="ri-mail-fill"></i> Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">© 2023 Neeraj Kumar. All rights reserved.</p>
+                <p class="text-gray-400 mt-4 md:mt-0">Last updated: May 27, 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script id="navigation-script">
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Mobile menu toggle
+            const menuButton = document.querySelector('nav button');
+            const mobileMenu = document.createElement('div');
+            mobileMenu.className = 'fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out';
+            mobileMenu.innerHTML = `
+                <div class="container mx-auto px-6 py-8">
+                    <div class="flex justify-between items-center mb-8">
+                        <a href="#" class="text-2xl font-['Pacifico'] text-primary">Neeraj</a>
+                        <button class="w-10 h-10 flex items-center justify-center">
+                            <i class="ri-close-line ri-lg"></i>
+                        </button>
+                    </div>
+                    <ul class="space-y-6">
+                        <li><a href="#about" class="text-xl font-medium text-gray-800 hover:text-primary transition-colors">About</a></li>
+                        <li><a href="#skills" class="text-xl font-medium text-gray-800 hover:text-primary transition-colors">Skills</a></li>
+                        <li><a href="#education" class="text-xl font-medium text-gray-800 hover:text-primary transition-colors">Education</a></li>
+                        <li><a href="#projects" class="text-xl font-medium text-gray-800 hover:text-primary transition-colors">Projects</a></li>
+                        <li><a href="#blog" class="text-xl font-medium text-gray-800 hover:text-primary transition-colors">Blog</a></li>
+                        <li><a href="#contact" class="text-xl font-medium text-gray-800 hover:text-primary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            `;
+            document.body.appendChild(mobileMenu);
+            
+            menuButton.addEventListener('click', function() {
+                mobileMenu.classList.remove('translate-x-full');
+            });
+            
+            mobileMenu.querySelector('button').addEventListener('click', function() {
+                mobileMenu.classList.add('translate-x-full');
+            });
+            
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('translate-x-full');
+                });
+            });
+        });
+    </script>
+
+    <script id="form-script">
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contact-form');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form values
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const subject = document.getElementById('subject').value;
+                    const message = document.getElementById('message').value;
+                    
+                    // Simple validation
+                    if (!name || !email || !message) {
+                        alert('Please fill in all required fields');
+                        return;
+                    }
+                    
+                    // Email validation
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(email)) {
+                        alert('Please enter a valid email address');
+                        return;
+                    }
+                    
+                    // Here you would normally send the form data to a server
+                    // For demo purposes, we'll just show a success message
+                    alert(`Thank you, ${name}! Your message has been sent successfully. I'll get back to you soon.`);
+                    
+                    // Reset form
+                    contactForm.reset();
+                });
+            }
+        });
+    </script>
+    <script id="scroll-animation-script">
+        document.addEventListener('DOMContentLoaded', function() {
+            // Simple scroll reveal animation
+            const revealElements = document.querySelectorAll('.skill-card, .project-card, .blog-card, .competition-card, .glass-card');
+            
+            function checkReveal() {
+                const windowHeight = window.innerHeight;
+                const revealPoint = 150;
+                
+                revealElements.forEach(element => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    
+                    if (elementTop < windowHeight - revealPoint) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    } else {
+                        element.style.opacity = '0';
+                        element.style.transform = 'translateY(50px)';
+                    }
+                });
+            }
+            
+            // Set initial styles
+            revealElements.forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(50px)';
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            });
+            
+            // Check on load
+            checkReveal();
+            
+            // Check on scroll
+            window.addEventListener('scroll', checkReveal);
+        });
+    </script>
+</body>
+</html>
